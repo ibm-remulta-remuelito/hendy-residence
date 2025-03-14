@@ -1,4 +1,4 @@
 /assets/UsersUSERAppDataRoamingnpm
 /assets/package-lock.json
 /assets/node_modules
-/system/application/cache
+/system/application/cache/*
