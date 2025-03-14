@@ -1,0 +1,24 @@
+
+@mixin add-transition() {
+    -o-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+@mixin menu-toggle-transition() {
+    -o-transition: transform 0.375s ease 0.125s, opacity 0.125s linear 0.25s;
+    -moz-transition: transform 0.375s ease 0.125s, opacity 0.125s linear 0.25s;
+    -webkit-transition: transform 0.375s ease 0.125s, opacity 0.125s linear 0.25s;
+    -ms-transition: transform 0.375s ease 0.125s, opacity 0.125s linear 0.25s;
+    transition: transform 0.375s ease 0.125s, opacity 0.125s linear 0.25s;
+}
+
+@mixin select-gradient() {
+    background: #F1F0ED;
+    background: -moz-linear-gradient(top, #f1f0ed 0%, #c1c1be 100%);
+    background: -webkit-linear-gradient(top, #f1f0ed 0%,#c1c1be 100%);
+    background: linear-gradient(to bottom, #f1f0ed 0%,#c1c1be 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f0ed', endColorstr='#c1c1be',GradientType=0 );
+}

@@ -1,0 +1,501 @@
+.page-home .hero-gallery--full-height {
+	.slide-logo {
+		position: absolute;
+		display: block;
+		top: 7.5rem;
+		right: 0px;
+		bottom: auto;
+		left: 0px;
+		width: 16rem;
+		height: auto;
+		margin: auto;
+		z-index: 99;
+
+		@media (max-width: $max-width--md) {
+			top: 4.5rem;
+		}
+
+		@media (max-width: $max-width--sm) {
+			top: 4.5rem;
+		}
+
+		@media (max-width: $max-width--xs) {
+			top: 2rem;
+			width: 12rem;
+		}
+
+	}
+	.caption {
+
+		h1 {
+			font-family: $primary-font-stack;
+			font-weight: bold;
+			text-transform: uppercase;
+			margin-bottom: 2rem;
+			font-size: 3rem;
+			letter-spacing: 5px;
+
+			@media (max-width: $max-width--md) {
+				font-size: 2.5rem;
+			}
+
+			@media (max-width: $max-width--xs) {
+				font-size: 1.75rem;
+				margin-bottom: 1rem;
+			}
+
+
+		}
+
+	}
+
+	li > .image-center .caption .valign-parent div.valign {
+		max-width: 100%;
+		// padding-top: 18rem;
+		// padding-bottom: 14.5rem;
+		position: relative;
+		text-align: center;
+		@media (max-width: $max-width--xs) {
+
+		}
+
+	}
+
+	.slide-address {
+			display: block;
+			padding: 0px;
+			margin-bottom: 2em;
+			border: 0;
+			line-height: inherit;
+			font-style: inherit;
+			font-weight: bold;
+			font-family: $primary-font-stack;
+			text-transform: uppercase;
+			font-size: 1.125rem;
+			letter-spacing: 3px;
+			text-align: center;
+			color: #ffffff;
+
+			@media (max-width: $max-width--md) {
+				bottom: 7rem;
+			}
+
+			@media (max-width: $max-width--sm) {
+				bottom: 7rem;
+			}
+
+			@media (max-width: $max-width--xs) {
+				bottom: 4rem;
+				font-size: 0.875rem;
+				letter-spacing: 2px;
+			}
+
+		}
+}
+
+.logo-groups {
+	position: absolute;
+	top: auto;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	&__item {
+		text-align: center;
+
+		&__link {
+			display: inline-block;
+		}
+		&__title {
+			text-transform: uppercase;
+			font-size: 0.875em;
+			text-decoration: underline;
+			letter-spacing: 0.16375em;
+
+			@media (max-width: $max-width--xs) {
+				font-size: 0.75em;
+			}
+		}
+		&--jcba {
+			.logo-groups__item__img {
+				max-width: 13.5em;
+				@media(max-width: $max-width--xs) {
+					max-width: 6.75em;
+				}
+			}
+		}
+		&--jm {
+			.logo-groups__item__img {
+				max-width: 10.375em;
+				@media(max-width: $max-width--xs) {
+					max-width: 5.1875em;
+				}
+			}
+		}
+	}
+}
+
+// .fancybox-margin {
+// 	margin-right: 0px !important;
+// }
+
+// .page-register #header,
+// .page-register .header-placeholder,
+// .page-register #footer {
+// 	display: none;
+// }
+
+// body.page-register {
+//     height: auto;
+//     min-height: 100%;
+// }
+
+/*
+.page-register {
+	// background: #32312D url('/assets/images/bg.jpg') no-repeat center center;
+	// background-size: cover;
+	background: #ffffff;
+	// text-align: center;
+	color: #ffffff;
+	//padding-top: 4.5rem;
+	//padding-bottom: 4.5rem;
+
+	// .logo {
+	// 	margin: auto;
+	// 	margin-bottom: 3rem;
+	// }
+
+	.partners img {
+		display: block;
+		margin: auto;
+	}
+
+	form {
+		margin-top: 2.5rem;
+		margin-bottom: 3rem;
+	}
+
+	form .button {
+		width: 100%;
+		border: 1px solid #ffffff;
+		font-size: 1.125rem;
+		letter-spacing: 0.333em;
+		line-height: 1;
+		padding: 1.3125rem 3rem 1.3125rem 3rem;
+		height: 3.75rem;
+	}
+
+	h1 {
+		text-transform: uppercase;
+		letter-spacing: 9px;
+		color:inherit;
+
+	}
+
+	h1, h2, h3, h4, h5, h6,
+	.h1, .h2, .h3, .h4, .h5, .h6 {
+		color: inherit;
+		font-family: $primary-font-stack;
+		font-weight: bold;
+		color: #000000;
+	}
+
+	.back-to-home {
+		display: block;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: auto;
+		left: auto;
+		text-transform: uppercase;
+		font-size: 0.875em;
+		letter-spacing: 0.4em;
+		line-height: 1;
+		margin-top: 3.5rem;
+		margin-right: 3.5rem;
+
+		@media (max-width: $max-width--xs) {
+			position: relative;
+			top: auto;
+			right: auto;
+			bottom: auto;
+			left: auto;
+			margin: auto;
+			margin-top: -2.5rem;
+			margin-bottom: 2.5rem;
+			text-align: center;
+
+		}
+
+		img {
+			display: inline-block;
+			height: 2.5rem;
+			margin: auto;
+			margin-left: 0.25rem;
+		}
+	}
+
+	.telephone-link {
+		display: block;
+		text-align: center;
+		text-transform: uppercase;
+		margin-top: 4rem;
+		// margin-bottom: 6.5rem;
+		&--2 {
+			margin-top: 3.5rem;
+		}
+	}
+
+	.company-logos a {
+		display: block;
+		margin: auto;
+
+		@media (max-width: $max-width--xs) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	.statement {
+		margin-top: 3.5em;
+		vertical-align: top;
+		text-align: center;
+
+		a {
+			text-transform: none;
+			text-decoration: underline;
+			letter-spacing: 0px;
+			float: none;
+			color: #000000;
+		}
+
+		@media (max-width: $max-width--xs) {
+			margin-top: 2em;
+		}
+	}
+}
+*/
+
+
+
+
+
+
+
+.register-form {
+	// background: #32312D url('/assets/images/bg.jpg') no-repeat center center;
+	// background-size: cover;
+	// background: #ffffff;
+	// text-align: center;
+	// color: #ffffff;
+	//padding-top: 4.5rem;
+	//padding-bottom: 4.5rem;
+
+	// .logo {
+	// 	margin: auto;
+	// 	margin-bottom: 3rem;
+	// }
+
+	.partners img {
+		display: block;
+		margin: auto;
+	}
+
+	form {
+		margin-top: 2.5rem;
+		margin-bottom: 3rem;
+	}
+
+	form .button {
+		width: 100%;
+		border: 1px solid #ffffff;
+		font-size: 1.125rem;
+		letter-spacing: 0.333em;
+		line-height: 1;
+		padding: 1.3125rem 3rem 1.3125rem 3rem;
+		height: 3.75rem;
+	}
+
+	h1 {
+		text-transform: uppercase;
+		letter-spacing: 9px;
+		color:inherit;
+
+	}
+
+	h1, h2, h3, h4, h5, h6,
+	.h1, .h2, .h3, .h4, .h5, .h6 {
+		color: inherit;
+		font-family: $primary-font-stack;
+		font-weight: bold;
+		color: #000000;
+	}
+
+	.back-to-home {
+		display: block;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: auto;
+		left: auto;
+		text-transform: uppercase;
+		font-size: 0.875em;
+		letter-spacing: 0.4em;
+		line-height: 1;
+		margin-top: 3.5rem;
+		margin-right: 3.5rem;
+
+		@media (max-width: $max-width--xs) {
+			position: relative;
+			top: auto;
+			right: auto;
+			bottom: auto;
+			left: auto;
+			margin: auto;
+			margin-top: -2.5rem;
+			margin-bottom: 2.5rem;
+			text-align: center;
+
+		}
+
+		img {
+			display: inline-block;
+			height: 2.5rem;
+			margin: auto;
+			margin-left: 0.25rem;
+		}
+	}
+
+	.telephone-link {
+		display: block;
+		text-align: center;
+		text-transform: uppercase;
+		margin-top: 4rem;
+		// margin-bottom: 6.5rem;
+		&--2 {
+			margin-top: 3.5rem;
+		}
+	}
+
+	.company-logos a {
+		display: block;
+		margin: auto;
+
+		@media (max-width: $max-width--xs) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	.statement {
+		margin-top: 3.5em;
+		vertical-align: top;
+		text-align: center;
+
+		a {
+			text-transform: none;
+			text-decoration: underline;
+			letter-spacing: 0px;
+			float: none;
+			color: #000000;
+		}
+
+		@media (max-width: $max-width--xs) {
+			margin-top: 2em;
+		}
+	}
+}
+
+
+
+
+
+
+#disclaimer {
+	padding: 4rem;
+
+	@media (max-width: $max-width--xs) { padding: 1.5rem; }
+}
+
+.fancybox-overlay {
+	background-image: none;
+	background-color: rgba($primary-font-colour, 0.95);
+}
+
+.fancybox-skin {
+	background-color: #ffffff;
+}
+
+.custom-fancybox-close {
+	display: block;
+	float: right;
+	position: absolute;
+	top: 1rem;
+	right: 1.5rem;
+	bottom: auto;
+	left: auto;
+}
+
+.banner {
+    background: #000000 url(/assets/images/bg.jpg) no-repeat center;
+    background-size: cover;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 84px;
+    padding: 1.3em 0 0.8em;
+    @media(max-width: 1199px) {
+    	margin-top: 78px;
+    }
+    @media(max-width: 991px) {
+    	margin-top: 62.5px;
+    }
+    @media(max-width: 767px) {
+    	margin-top: 48px;
+    	padding: 1.5em 0 1em;
+    }
+
+    &__title {
+    	font-family: $primary-font-stack;
+    	color: #ffffff;
+    	letter-spacing: 5.71px;
+    	@media(max-width: 1199px) {
+    		font-size: 1.5em;
+    	}
+    	@media(max-width: 767px) {
+    		font-size: 1.4em;
+    	}
+    }
+    &__address {
+    	font-family: $primary-font-stack;
+    	color: #ffffff;
+    	margin: 1em 0 0;
+
+    }
+}
+
+
+.register-form {
+	position: relative;
+	z-index: 3;
+	padding-top: 4.5em;
+	@media(max-width: $max-width--xs) {
+		margin-top: 2em;
+		padding-top: 0px;
+	}
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

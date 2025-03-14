@@ -1,0 +1,71 @@
+
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('../fonts/lib/fontawesome-webfont.eot?v=4.6.3');
+	src: url('../fonts/lib/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), 
+	url('../fonts/lib/fontawesome-webfont.woff2?v=4.6.3') format('woff2'), 
+	url('../fonts/lib/fontawesome-webfont.woff?v=4.6.3') format('woff'), 
+	url('../fonts/lib/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), 
+	url('../fonts/lib/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
+
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'Domaine';
+    src: url('../fonts/DomaineDisp-Regular.otf');
+    src: url('../fonts/DomaineDisp-Regular.otf'),
+         url('../fonts/DomaineDisplay-Regular.woff2') format('woff2'),
+         url('../fonts/DomaineDisplay-Regular.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+// @font-face{
+// font-family:"Gotham";
+// src:url("../fonts/Gotham-Light.eot?#iefix");
+// src:url("../fonts/Gotham-Light.eot?#iefix") format("embedded-opentype"),
+// url("../fonts/Gotham-Light.woff") format("woff"),
+// url("../fonts/Gotham-Light.ttf") format("truetype"),
+// url("../fonts/Gotham-Light.svg#Gotham-Light") format("svg");
+
+// font-weight: 200;
+// font-style: normal;
+// }
+
+@font-face{
+    font-family:"Gotham";
+    src: url("../fonts/Gotham-Book.eot?#iefix");
+    src: url("../fonts/Gotham-Book.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/Gotham-Book.woff") format("woff"),
+         url("../fonts/Gotham-Book.ttf") format("truetype"),
+         url("../fonts/Gotham-Book.svg#Gotham-Book") format("svg");
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family:"Gotham";
+    src: url("../fonts/Gotham-Medium.eot?#iefix");
+    src: url("../fonts/Gotham-Medium.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/Gotham-Medium.woff") format("woff"),
+         url("../fonts/Gotham-Medium.ttf") format("truetype"),
+         url("../fonts/Gotham-Medium.svg#Gotham-Medium") format("svg");
+
+    font-weight: bold;
+    font-style: normal;
+}
+
+// @font-face{
+// font-family:"Gotham";
+// src:url("../fonts/Gotham-Bold.eot?#iefix");
+// src:url("../fonts/Gotham-Bold.eot?#iefix") format("embedded-opentype"),
+// url("../fonts/Gotham-Bold.woff") format("woff"),
+// url("../fonts/Gotham-Bold.ttf") format("truetype"),
+// url("../fonts/Gotham-Bold.svg#Gotham-Bold") format("svg");
+
+// font-weight: 700;
+// font-style: normal;
+// }
