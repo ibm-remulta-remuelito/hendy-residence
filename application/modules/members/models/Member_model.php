@@ -52,4 +52,30 @@ class member_model extends CI_Model
 
         return $query->result();
     }
+
+    /**
+     * Retrieve a member by their ID
+     *
+     * @param int $id The ID of the member to retrieve
+     * @return object|null The member object if found, null otherwise
+     */
+    public function get_by_id($id) {
+        $this->db->where('id', $id);
+        $query = $this->db->get('members');
+
+        return $query->row();
+    }
+
+    /**
+     * Remove a member from the database
+     *
+     * @param int $id The ID of the member to remove
+     * @return int The number of rows affected by the deletion
+     */
+    public function remove($id) {
+        $this->db->where('id', $id);
+        $this->db->delete('members');
+
+        return $this->db->affected_rows();
+    }
 }
