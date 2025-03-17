@@ -124,13 +124,16 @@ class Members extends MX_Controller
     }
 
     /**
-     * Deletes a member.
+     * Deletes a member from the database.
      *
-     * This function takes a member ID as an argument, uses the member model to remove the member from the database, and then redirects to the members page.
-     * @param int $member_id The member ID to be deleted.
+     * This function removes a member's record using the member model and then
+     * sets a session status message. It finally redirects to the members page.
+     *
+     * @param int $member_id The ID of the member to be deleted.
      */
     public function delete($member_id) {
         $this->member_model->remove($member_id);
+        $_SESSION['status'] = "Member successfully updated/deleted";
         redirect('members');
     }
 }
