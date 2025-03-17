@@ -20,7 +20,7 @@
                         <td><?= $member->phone; ?></td>
                         <td>
                             <a href="<?= site_url('members/edit/' . $member->id); ?>" class="btn btn-primary btn-xs">Edit</a>
-                            <a href="<?= site_url('members/delete/' . $member->id); ?>" class="btn btn-danger btn-xs">Delete</a>
+                            <a href="<?= site_url('members/confirm_delete/' . $member->id); ?>" class="btn btn-danger btn-xs">Delete</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>

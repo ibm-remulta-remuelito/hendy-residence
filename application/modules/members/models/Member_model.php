@@ -65,4 +65,17 @@ class member_model extends CI_Model
 
         return $query->row();
     }
+
+    /**
+     * Remove a member from the database
+     *
+     * @param int $id The ID of the member to remove
+     * @return int The number of rows affected by the deletion
+     */
+    public function remove($id) {
+        $this->db->where('id', $id);
+        $this->db->delete('members');
+
+        return $this->db->affected_rows();
+    }
 }
