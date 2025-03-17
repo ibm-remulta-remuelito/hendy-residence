@@ -35,7 +35,6 @@ class Pages extends MX_Controller {
         if(!$page) $page = 'home';
         if ( ! file_exists('application/modules/pages/views/'.$page.'.php') )
         {
-            var_dump('application/modules/pages/views/'.$page.'.php');
             // Whoops, we don't have a page for that!
             return show_404();
         }

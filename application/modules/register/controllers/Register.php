@@ -33,4 +33,10 @@ class Register extends MX_Controller {
         $this->data['page_content'] = $this->load->view($page, $this->data, TRUE);
         $this->load->view('template', $this->data);
     }
+
+    public function create() {
+        $this->load->model('register/register');
+        $memberData = $this->input->post();
+        $this->register->addNewMember($memberData['name'], $memberData['email'], $memberData['phone']);
+    }
 }
