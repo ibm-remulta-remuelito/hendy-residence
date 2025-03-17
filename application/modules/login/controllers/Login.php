@@ -66,10 +66,9 @@ class Login extends MX_Controller {
         $valid_member = $this->member_model->check_if_valid($credentials['email'], $credentials['password']);
 
         session_start();
-        if( ! $valid_member) {
-            session_destroy();
-            $this->data['form_result'] = (object) array('form_name' => 'login', 'form_success' => FALSE, 'form_message' => 'Invalid login credentials.');
-            $this->index();
+        if( ! $valid_member['is_valid']) {
+            $_SESSION['error'] = 'Invalid login credentials';
+            redirect('login');
         }
 
         $_SESSION['member'] = serialize($valid_member);

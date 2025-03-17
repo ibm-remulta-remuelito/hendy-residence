@@ -4,12 +4,22 @@
         <h3 class="text-center">Member Information</h3>
         <hr>
         <form action="<?php echo base_url('register/update'); ?>" method="POST">
+            <?php
+                if (isset($_GET['errors'])) {
+                    echo '<div class="alert alert-danger">Please correct the following errors:';
+                    $errors = unserialize(base64_decode($_GET['errors']));
+                    foreach ($errors as $error) {
+                        echo '<div class="error">' . $error . '</div>';
+                    }
+                    echo '</div>';
+                }
+            ?>
             <div class="row">
                 <input type="hidden" name="member_id" value="<?= $member->id; ?>">
-                <input type="text" name="name" value="<?= $member->name; ?>" placeholder="Full Name*" title="Full Name*" required="required" />
+                <input type="text" name="name" value="<?= $member->name; ?>" placeholder="Full Name*" title="Full Name*"/>
             </div>
             <div class="row">
-                <input type="email" name="email" value="<?= $member->email; ?>" placeholder="Email*" title="Email*" required="required" />
+                <input type="text" name="email" value="<?= $member->email; ?>" placeholder="Email*" title="Email*"/>
             </div>
             <div class="row">
                 <input type="text" name="phone" value="<?= $member->phone; ?>" placeholder="Phone" title="Phone" />

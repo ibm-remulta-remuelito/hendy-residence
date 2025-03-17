@@ -56,6 +56,7 @@ class Register extends MX_Controller {
      */
     public function create() {
         $member_data = $this->input->post();
+        $this->validate_create_form();
         $member_id = $this->register_model->create($member_data['name'], $member_data['email'], $member_data['phone']);
         if ($member_id) {
             $this->data['form_result'] = (object) array('form_name' => 'register', 'form_success' => TRUE, 'member_id' => $member_id);
@@ -105,24 +106,26 @@ class Register extends MX_Controller {
      */
     public function create_password() {
         $password_data = $this->input->post();
-
+        $this->validate_create_password_form();
         if (!$password_data['member_id']) {
             return show_404();
-        } else if ($password_data['password'] != $password_data['password_confirm']) {
+        } else if ($this->form_validation->run() == FALSE) {
+            $errors = base64_encode(serialize($this->form_validation->error_array()));
             $this->data['form_result'] = (object) array(
                 'form_name' => 'password',
                 'form_success' => FALSE,
-                'form_message' => 'Password doesn\'t match',
-                'member_id' => $member_id
+                'member_id' => $password_data['member_id']
             );
+            $this->data['errors'] = $errors;
             $this->password_registration($this->data['form_result']);
-        }
-
-        $password_status = $this->register_model->create_password($password_data['member_id'], $password_data['password']);
-        if ($password_status) {
-            redirect('login');
         } else {
-            return show_404();
+            $password_status = $this->register_model->create_password($password_data['member_id'], $password_data['password']);
+            if ($password_status) {
+                $_SESSION['status'] = "Your registration has been successful";
+                redirect('login');
+            } else {
+                return show_404();
+            }
         }
     }
 
@@ -134,16 +137,32 @@ class Register extends MX_Controller {
      */
     public function update() {
         $member_data = $this->input->post();
-        $this->register_model->update_member($member_data);
-
-        if ($member_data['password'] == $member_data['password_confirm'] && !empty($member_data['password'])) {
-            $this->register_model->update_password($member_id, $member_data['password']);
-        } else if ($member_data['password'] != $member_data['password_confirm']) {
-            $this->data['form_result'] = (object) array('form_name' => 'register_edit', 'form_success' => FALSE, 'member_id' => $member_id);
-            redirect('members/edit/'. $member_data['member_id']);
+        $this->validate_edit_form();
+        if($this->form_validation->run() == FALSE) {
+            $errors = base64_encode(serialize($this->form_validation->error_array()));
+            redirect('members/edit/'.$member_data['member_id'].'?errors='.$errors);
         }
 
-        $this->data['form_result'] = (object) array('form_name' => 'register_edit', 'form_success' => TRUE, 'member_id' => $member_id);
+        $this->register_model->update_member($member_data);
+        if(!empty($member_data['password'])) {
+            $this->register_model->update_password($member_id, $member_data['password']);
+        }
+        $_SESSION['status'] = "Member successfully updated/deleted";
         redirect('members');
+    }
+
+    private function validate_edit_form() {
+        $this->validate_create_form();
+        $this->validate_create_password_form();
+    }
+
+    private function validate_create_form() {
+        $this->form_validation->set_rules('name', 'Name', 'trim|required');
+        $this->form_validation->set_rules('email', 'Email', 'trim|valid_email|required');
+    }
+
+    private function validate_create_password_form() {
+        $this->form_validation->set_rules('password', 'Password', 'trim|matches[password_confirm]');
+        $this->form_validation->set_rules('password_confirm', 'Password Confirmation', 'trim|matches[password]');
     }
 }
