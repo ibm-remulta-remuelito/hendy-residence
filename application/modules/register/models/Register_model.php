@@ -51,4 +51,20 @@ class register_model extends CI_Model
         $this->db->insert('passwords', $data);
         return $this->db->insert_id() ? TRUE : FALSE;
     }
+
+    /**
+     * Updates an existing member entry in the database
+     *
+     * @param array $member_data An associative array containing the member data to update, including the 'id' key
+     *
+     * @return int The ID of the updated member
+     */
+    public function update($member_data) {
+        $member_id = $member_data['member_id'];
+        unset($member_data['member_id']);
+
+        $this->db->where('id', $member_id);
+        $this->db->update('members', $member_data);
+        return $member_id;
+    }
 }

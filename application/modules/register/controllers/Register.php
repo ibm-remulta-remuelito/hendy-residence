@@ -125,4 +125,19 @@ class Register extends MX_Controller {
             return show_404();
         }
     }
+
+    /**
+     * Updates member information.
+     *
+     * This function retrieves member data from a POST request and uses the register model to update the member's information.
+     * If the update is successful, it sets the form result data and redirects to the members page.
+     */
+    public function update() {
+        $member_data = $this->input->post();
+        $member_id = $this->register_model->update($member_data);
+        if ($member_id) {
+            $this->data['form_result'] = (object) array('form_name' => 'register', 'form_success' => TRUE, 'member_id' => $member_id);
+            redirect('members');
+        }
+    }
 }

@@ -52,4 +52,17 @@ class member_model extends CI_Model
 
         return $query->result();
     }
+
+    /**
+     * Retrieve a member by their ID
+     *
+     * @param int $id The ID of the member to retrieve
+     * @return object|null The member object if found, null otherwise
+     */
+    public function get_by_id($id) {
+        $this->db->where('id', $id);
+        $query = $this->db->get('members');
+
+        return $query->row();
+    }
 }

@@ -50,4 +50,40 @@ class Members extends MX_Controller
             redirect('login');
         }
     }
+
+    /**
+     * Displays the edit member page.
+     *
+     * This function starts a session and checks if a member is logged in.
+     * If a member is logged in, it retrieves the member data via the member model,
+     * sets various meta and template data, and loads the edit member view.
+     * If not logged in, it destroys the session and redirects to the login page.
+     * 
+     * @param int $member_id The member ID to be retrieved and edited.
+     */
+    public function edit($member_id) {
+        if(isset($_SESSION['member'])) {
+            $member = $this->member_model->get_by_id($member_id);
+            $this->data['meta_keywords']    = '';
+            $this->data['meta_description'] = '';
+            $this->data['meta_title']       = '';
+            $this->data['template']         = 'members';
+
+            $this->data['site_name']        = config_item('site_name');       
+            $this->data['css']              = config_item('css');
+            $this->data['js']               = config_item('js');
+
+            $page = 'edit';
+
+            $this->data['menu'] = config_item('menu');
+            $this->data['page_name'] = $page;
+            $this->data['member'] = $member;
+
+            $this->data['page_content'] = $this->load->view($page, $this->data, TRUE);
+            $this->load->view('template', $this->data);
+        } else {
+            session_destroy();
+            redirect('login');
+        }
+    }
 }
