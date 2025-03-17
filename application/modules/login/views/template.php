@@ -89,7 +89,7 @@
 			<nav class="menu">
 				<div class="menu__inner">
                     <a><span>BRAND NEW LUXURY BEACHSIDE PENTHOUSES</span></a>
-                    <a href="<?php echo base_url('login'); ?>" class="menu__enquire-now"><span>Login</span></a>
+                    <a href="<?php echo base_url('register'); ?>" class="menu__enquire-now"><span>Register</span></a>
 				</div>
 			</nav>
 		</div>

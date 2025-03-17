@@ -1,9 +1,9 @@
 <div class="hero-gallery hero-gallery--smaller">
     <div class="container">
         <br>
-        <h3>Member Registration</h3>
+        <h3 class="text-center">Member Registration</h3>
         <hr>
-        <form action="" method="POST">
+        <form action="<?php echo base_url('register/create'); ?>" method="POST">
             <div class="row">
                 <input type="text" name="name" value="<?php echo set_value('name'); ?>" placeholder="Full Name*" title="Full Name*" required="required" />
             </div>
@@ -14,7 +14,7 @@
                 <input type="text" name="phone" value="<?php echo set_value('phone'); ?>" placeholder="Phone" title="Phone" />
             </div>
             <div class="row">
-                <input type="submit" value="Register" />
+                <input type="submit" class="button" value="Register"/>
             </div>
         </form>
     </div>
