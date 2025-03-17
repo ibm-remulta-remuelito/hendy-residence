@@ -17,7 +17,7 @@
             </div>
             <div class="row">
                 <a href="<?= base_url('members/delete/' . $member->id); ?>" type="submit" class="btn btn-danger">Delete</a>
-                <a href="<?= base_url('members'); ?>" class="btn btn-default">Back to Members</a>
+                <a href="<?= base_url('members'); ?>" class="btn btn-default">Cancel</a>
             </div>
         </div>
     </div>

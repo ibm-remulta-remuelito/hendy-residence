@@ -3,6 +3,12 @@
         <br>
         <h3>Members</h3>
         <br>
+        <?php
+            if (isset($_SESSION['status'])) {
+                echo '<div class="alert alert-success">' . $_SESSION['status'] . '</div>';
+                unset($_SESSION['status']);
+            }
+        ?>
         <table class="table table-bordered table-striped table-responsive">
             <thead>
                 <tr>
