@@ -15,6 +15,15 @@ class register_model extends CI_Model
         $this->load->database();
     }
 
+    /**
+     * Creates a new member entry in the database
+     *
+     * @param string $name
+     * @param string $email
+     * @param string $phone
+     *
+     * @return int|false The ID of the newly created entry or false on failure
+     */
     public function create($name, $email, $phone)
     {
         $data = array(
@@ -26,6 +35,14 @@ class register_model extends CI_Model
         return $this->db->insert_id() ? $this->db->insert_id() : FALSE;
     }
 
+    /**
+     * Creates a new password entry in the database
+     *
+     * @param int $member_id
+     * @param string $password
+     *
+     * @return bool TRUE if the password was created successfully, FALSE otherwise
+     */
     public function create_password($member_id, $password) {
         $data = array(
             'member_id' => $member_id,

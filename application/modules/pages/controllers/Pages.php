@@ -16,6 +16,10 @@ class Pages extends MX_Controller {
 
     public function index()
     {
+        if(isset($_SESSION['member'])) {
+            redirect('members');
+        }
+        session_destroy();
 
         $this->data['meta_keywords']    = '';
         $this->data['meta_description'] = '';

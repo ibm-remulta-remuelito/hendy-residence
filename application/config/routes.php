@@ -56,6 +56,7 @@ $route['sitemap\.xml']                      = "pages/sitemap";
 $route['ajax/(:any)']                       = 'ajax/$1';
 $route['register/(:any)']                   = 'register/register/$1';
 $route['login/(:any)']                      = 'login/login/$1';
+$route['members/(:any)']                    = 'members/members/$1';
 
 $route['404_override']                      = 'pages/index';
 $route['translate_uri_dashes']              = FALSE;

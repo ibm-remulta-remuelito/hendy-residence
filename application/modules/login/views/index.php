@@ -3,7 +3,7 @@
         <br>
         <h3 class="text-center">Member Login</h3>
         <hr>
-        <form action="<?php echo base_url('log-in/verify'); ?>" method="POST">
+        <form action="<?php echo base_url('login/verify'); ?>" method="POST">
             <div class="row">
                 <input type="email" name="email" placeholder="Email" title="Email" required="required" />
             </div>
