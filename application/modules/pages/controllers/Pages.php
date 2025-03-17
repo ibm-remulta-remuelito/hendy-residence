@@ -16,6 +16,10 @@ class Pages extends MX_Controller {
 
     public function index()
     {
+        if(isset($_SESSION['member'])) {
+            redirect('members');
+        }
+        session_destroy();
 
         $this->data['meta_keywords']    = '';
         $this->data['meta_description'] = '';
@@ -35,7 +39,6 @@ class Pages extends MX_Controller {
         if(!$page) $page = 'home';
         if ( ! file_exists('application/modules/pages/views/'.$page.'.php') )
         {
-            var_dump('application/modules/pages/views/'.$page.'.php');
             // Whoops, we don't have a page for that!
             return show_404();
         }

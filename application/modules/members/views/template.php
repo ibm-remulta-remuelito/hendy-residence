@@ -89,11 +89,10 @@
 			<nav class="menu">
 				<div class="menu__inner">
                     <a><span>BRAND NEW LUXURY BEACHSIDE PENTHOUSES</span></a>
-                    <a href="<?php echo base_url('login'); ?>" class="menu__enquire-now"><span>Login</span></a>
+                    <a href="<?php echo base_url('login/logout'); ?>" class="menu__enquire-now"><span>Logout</span></a>
 				</div>
 			</nav>
 		</div>
-
 
 		<div class="menu__right-corner">
 			<span class="gt-wrapper">
