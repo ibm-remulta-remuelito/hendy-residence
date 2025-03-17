@@ -15,6 +15,12 @@
                 <input type="text" name="phone" value="<?= $member->phone; ?>" placeholder="Phone" title="Phone" />
             </div>
             <div class="row">
+                <input type="password" name="password" placeholder="New Password" title="New Password" />
+            </div>
+            <div class="row">
+                <input type="password" name="password_confirm" placeholder="Confirm Password" title="Confirm Password" />
+            </div>
+            <div class="row">
                 <input type="submit" class="button" value="Update"/>
             </div>
         </form>

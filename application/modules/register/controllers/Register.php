@@ -134,10 +134,16 @@ class Register extends MX_Controller {
      */
     public function update() {
         $member_data = $this->input->post();
-        $member_id = $this->register_model->update($member_data);
-        if ($member_id) {
-            $this->data['form_result'] = (object) array('form_name' => 'register', 'form_success' => TRUE, 'member_id' => $member_id);
-            redirect('members');
+        $this->register_model->update_member($member_data);
+
+        if ($member_data['password'] == $member_data['password_confirm'] && !empty($member_data['password'])) {
+            $this->register_model->update_password($member_id, $member_data['password']);
+        } else if ($member_data['password'] != $member_data['password_confirm']) {
+            $this->data['form_result'] = (object) array('form_name' => 'register_edit', 'form_success' => FALSE, 'member_id' => $member_id);
+            redirect('members/edit/'. $member_data['member_id']);
         }
+
+        $this->data['form_result'] = (object) array('form_name' => 'register_edit', 'form_success' => TRUE, 'member_id' => $member_id);
+        redirect('members');
     }
 }

@@ -53,18 +53,43 @@ class register_model extends CI_Model
     }
 
     /**
-     * Updates an existing member entry in the database
+     * Updates member information in the database.
      *
-     * @param array $member_data An associative array containing the member data to update, including the 'id' key
+     * This function updates the member's name, email, and phone based on the
+     * provided member data array. It locates the member by their ID and executes
+     * an update on the 'members' table.
      *
-     * @return int The ID of the updated member
+     * @param array $member_data An associative array containing the member's ID,
+     *                           name, email, and phone.
+     * @return int The ID of the updated member.
      */
-    public function update($member_data) {
+    public function update_member($member_data) {
         $member_id = $member_data['member_id'];
-        unset($member_data['member_id']);
+        $member = array(
+            'name' => $member_data['name'],
+            'email' => $member_data['email'],
+            'phone' => $member_data['phone']
+        );
 
         $this->db->where('id', $member_id);
-        $this->db->update('members', $member_data);
+        $this->db->update('members', $member);
+        return $member_id;
+    }
+
+    /**
+     * Updates an existing password entry in the database
+     *
+     * @param int $member_id The ID of the member to update the password for
+     * @param string $password The new password to store
+     *
+     * @return int The ID of the member that was updated
+     */
+    public function update_password($member_id, $password) {
+        $data = array(
+            'password' => password_hash($password, PASSWORD_BCRYPT)
+        );
+        $this->db->where('member_id', $member_id);
+        $this->db->update('passwords', $data);
         return $member_id;
     }
 }
