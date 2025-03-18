@@ -6,9 +6,15 @@
 A sample web application built using CodeIgniter 3 with Hierarchical Model View Controller application design pattern that makes the project have 3 different modules.
 
 ### The 3 different modules includes:
-- Registration module - this module handles the member's registration process in order to gain access to member's information.
-- Authentication (login) module - this module handles the user grants of the registered member.
-- Member module - this module handles the member information processes.
+- **Registration module** - this module handles the member's registration process in order to gain access to member's information.
+![Screenshot 2025-03-18 190816](https://github.com/user-attachments/assets/27927315-474e-4aaf-ba92-2ef9d31a52c8)
+
+- **Authentication (login) module** - this module handles the user grants of the registered member.
+![Screenshot 2025-03-18 190827](https://github.com/user-attachments/assets/7ccb3d6f-4e61-4566-8cc8-aeb191587d3b)
+
+- **Member module** - this module handles the member information processes like edit, view and delete registered members.
+![Screenshot 2025-03-18 190844](https://github.com/user-attachments/assets/f5bed744-41d2-4c51-a58f-e165a399dfda)
+
 
 ### SCSS Compilation & Documentation:
 
