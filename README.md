@@ -1,6 +1,8 @@
 
 # Hendy Residence Web Application
 
+![Screenshot 2025-03-18 190448](https://github.com/user-attachments/assets/33207deb-4162-4920-a2fd-402381cb4a71)
+
 A sample web application built using CodeIgniter 3 with Hierarchical Model View Controller application design pattern that makes the project have 3 different modules.
 
 ### The 3 different modules includes:
@@ -9,6 +11,9 @@ A sample web application built using CodeIgniter 3 with Hierarchical Model View 
 - Member module - this module handles the member information processes.
 
 ### SCSS Compilation & Documentation:
+
+![Screenshot 2025-03-18 190545](https://github.com/user-attachments/assets/f3978a4a-efa8-456a-a73f-233e610ee341)
+
 The frontend builder plugin version are quite old makes the development process challenging but I manage to use gulp-cli library with Node version 8 as supported version for the previous implementation of Gulp version 3.9.
 
 To re-use the existing API, all you have to do is to follow the command below once the project is clone and Node version 8 is installed.
