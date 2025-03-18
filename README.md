@@ -5,21 +5,21 @@
 
 A sample web application built using CodeIgniter 3 with Hierarchical Model View Controller application design pattern that makes the project have 3 different modules.
 
-### The 3 different modules includes:
+### The 3 Different Modules
 - **Registration module** - this module handles the member's registration process in order to gain access to member's information.
+
 ![Screenshot 2025-03-18 190816](https://github.com/user-attachments/assets/27927315-474e-4aaf-ba92-2ef9d31a52c8)
 
 - **Authentication (login) module** - this module handles the user grants of the registered member.
+
 ![Screenshot 2025-03-18 190827](https://github.com/user-attachments/assets/7ccb3d6f-4e61-4566-8cc8-aeb191587d3b)
 
 - **Member module** - this module handles the member information processes like edit, view and delete registered members.
+
 ![Screenshot 2025-03-18 190844](https://github.com/user-attachments/assets/f5bed744-41d2-4c51-a58f-e165a399dfda)
 
 
-### SCSS Compilation & Documentation:
-
-![Screenshot 2025-03-18 190545](https://github.com/user-attachments/assets/f3978a4a-efa8-456a-a73f-233e610ee341)
-
+### SCSS Compilation & Documentation
 The frontend builder plugin version are quite old makes the development process challenging but I manage to use gulp-cli library with Node version 8 as supported version for the previous implementation of Gulp version 3.9.
 
 To re-use the existing API, all you have to do is to follow the command below once the project is clone and Node version 8 is installed.
@@ -32,17 +32,9 @@ npx gulp
 ```
 
 The command prompt should look like this now:
-```
-C:\xampp\htdocs\test-be\assets>npx gulp
-[18:15:01] Using gulpfile C:\xampp\htdocs\test-be\assets\gulpfile.js
-[18:15:01] Starting 'default'...
-[18:15:01] Starting 'sass'...
-[18:15:01] Starting 'watch'...
-[18:15:01] Finished 'watch' after 14 ms
-[18:15:01] Finished 'sass' after 173 ms
-[18:15:01] Finished 'default' after 174 ms
 
-```
+![Screenshot 2025-03-18 190545](https://github.com/user-attachments/assets/f3978a4a-efa8-456a-a73f-233e610ee341)
+
 ### Documentation
 Setup is easy, all you have to do is to follow the steps below to successfully setup the project on your local environment (this documentation applies for Windows):
 - Install XAMPP Controller Panel with PHP 5 version.
